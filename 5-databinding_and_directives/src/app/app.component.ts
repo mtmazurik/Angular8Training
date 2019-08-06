@@ -9,7 +9,8 @@ export class AppComponent {
   title = 'bootstrap-example';
   allowNewServer = false;
   serverCreationStatus = 'No server was created!';
-  serverName = 'LAVA';
+  serverName = 'Testserver';
+  servers = ['Testserver'];
 
   constructor() {
     setTimeout( () => {
@@ -18,6 +19,7 @@ export class AppComponent {
   }
 
   onCreateServer() {
+    this.servers.push(this.serverName);
     this.serverCreationStatus = 'Server was created! Name is ' + this.serverName;
   }
 
